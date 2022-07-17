@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+}
+body {
+  background: #000000;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.game-container {
+  width: 405px;
+  height: 505px;
+  background: #ececec;
+  outline: 1px black solid;
+}
+
+.game-header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.moves {
+  width: 150px;
+  height: 100px;
+  padding: 5px;
+  padding-top: 40px;
+  position: relative;
+  line-height: 50px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.moves::before {
+  content: "MOVES";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.big-button {
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  height: 50px;
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #0002;
+  cursor: pointer;
+}
+
+.board {
+  width: 405px;
+  height: 405px;
+  position: relative;
+  background: #ddd;
+}
+
+.overlay {
+  width: 405px;
+  height: 405px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #0004;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  width: 95px;
+  height: 95px;
+  position: absolute;
+  background: white;
+  transition: all 0.1s linear;
+  border-radius: 2px;
+  background-size: 400px 400px;
+}
+.game-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 405px;
+  height: 405px;
+  background: #ddd;
+  padding: 5px;
+}
+.picture {
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+}
+.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
